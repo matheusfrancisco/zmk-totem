@@ -13,13 +13,13 @@ layers:
   - P
   - A
   - S
-  - D
-  - F
+  - {t: D, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: F, h: '$$mdi:apple-keyboard-control$$'}
   - G
   - H
   - J
-  - K
-  - L
+  - {t: K, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: L, h: '$$mdi:apple-keyboard-command$$'}
   - ;
   - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-control$$'}
   - Z
