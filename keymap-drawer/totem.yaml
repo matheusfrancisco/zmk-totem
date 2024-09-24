@@ -12,7 +12,7 @@ layers:
   - O
   - P
   - A
-  - S
+  - {t: S, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: D, h: '$$mdi:apple-keyboard-command$$'}
   - {t: F, h: '$$mdi:apple-keyboard-control$$'}
   - G
@@ -33,11 +33,11 @@ layers:
   - .
   - /
   - $$mdi:apple-keyboard-shift$$
-  - {t: '$$mdi:backspace$$', h: '$$mdi:apple-keyboard-command$$'}
+  - '&tp LGUI'
   - nav
+  - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:keyboard-space$$
-  - RET
-  - sim
+  - {t: RET, h: '2'}
   - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-option$$'}
   nav:
   - '1'
@@ -80,7 +80,7 @@ layers:
   - {t: ▽, type: trans}
   sim:
   - '!'
-  - '@'
+  - $
   - '#'
   - $
   - '%'
@@ -90,9 +90,9 @@ layers:
   - (
   - )
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - $$mdi:volume-high$$
-  - $$mdi:skip-next$$
+  - '@'
+  - (
+  - )
   - $$mdi:play-pause$$
   - '-'
   - '='
@@ -101,9 +101,9 @@ layers:
   - '|'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - $$mdi:volume-low$$
-  - $$mdi:skip-previous$$
+  - '#'
+  - '['
+  - ']'
   - {t: ▽, type: trans}
   - _
   - +
@@ -115,7 +115,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   adjust:
   - '&bootloader'
@@ -154,5 +154,5 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
