@@ -33,11 +33,11 @@ layers:
   - .
   - /
   - $$mdi:apple-keyboard-shift$$
-  - '&tp LGUI'
+  - $$mdi:apple-keyboard-command$$
   - nav
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:keyboard-space$$
-  - '&tp RET'
+  - RET
   - sim
   nav:
   - '1'
