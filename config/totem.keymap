@@ -36,9 +36,9 @@
       label= "BASE";
       bindings = <
                     &kp Q &kp W &kp E &kp R &kp T  &kp Y  &kp U &kp I     &kp O   &kp P
-                    &kp A &kp S &tp LGUI D &tp LCTRL F &kp G  &kp H  &kp J &tp LCTRL K  &tp LGUI L   &kp SEMI
+                    &kp A &tp LSHIFT S &tp LGUI D  &tp LCTRL F &kp G  &kp H  &kp J &tp LCTRL K  &tp LGUI L   &kp SEMI
       &tp LCTRL ESC &kp Z &kp X &kp C &kp V &kp B  &kp N  &kp M &kp COMMA &kp DOT &kp FSLH &kp LSHFT
-                  &tp LGUI BSPC &mo NAV &kp SPACE  &kp RET &mo SYM &tp LALT ESC
+                  &tp LGUI  &mo NAV &kp BSPC  &kp SPACE &tp SYM RET &tp LALT ESC
       >;
     };
 
@@ -55,9 +55,9 @@
     sim_layer {
       label= "SYM";
       bindings = <
-               &kp EXCL &kp AT &kp HASH     &kp DLLR   &kp PRCNT  &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR
-               &trans   &trans &kp C_VOL_UP &kp C_NEXT &kp C_PP   &kp MINUS &kp EQUAL &kp LBRC  &kp RBRC &kp PIPE
-        &trans &trans   &trans &kp C_VOL_DN &kp C_PREV &trans     &kp UNDER &kp PLUS  &kp LBKT  &kp RBKT &kp BSLH &trans
+               &kp EXCL &kp DLLR &kp HASH     &kp DLLR   &kp PRCNT  &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR
+               &trans   &kp AT &kp LPAR &kp RPAR &kp C_PP   &kp MINUS &kp EQUAL &kp LBRC  &kp RBRC &kp PIPE
+        &trans &trans   &kp HASH &kp LBKT &kp RBKT &trans     &kp UNDER &kp PLUS  &kp LBKT  &kp RBKT &kp BSLH &trans
                                      &tp LGUI DEL &trans &trans   &trans &trans &trans
       >;
     };
