@@ -1,6 +1,6 @@
 layout: {qmk_keyboard: totem}
 layers:
-  base:
+  BASE:
   - Q
   - W
   - E
@@ -12,14 +12,14 @@ layers:
   - O
   - P
   - A
-  - {t: S, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: D, h: '$$mdi:apple-keyboard-command$$'}
-  - {t: F, h: '$$mdi:apple-keyboard-control$$'}
+  - S
+  - D
+  - F
   - G
   - H
   - J
-  - {t: K, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: L, h: '$$mdi:apple-keyboard-command$$'}
+  - K
+  - L
   - ;
   - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-control$$'}
   - Z
@@ -33,13 +33,13 @@ layers:
   - .
   - /
   - $$mdi:apple-keyboard-shift$$
-  - $$mdi:apple-keyboard-command$$
-  - nav
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:backspace$$', h: '$$mdi:apple-keyboard-command$$'}
+  - NAVI
   - $$mdi:keyboard-space$$
   - RET
-  - sim
-  nav:
+  - SYM
+  - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-option$$'}
+  NAVI:
   - '1'
   - '2'
   - '3'
@@ -61,9 +61,9 @@ layers:
   - $$mdi:arrow-right-bold$$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - $$mdi:apple-keyboard-shift$$
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - AGr+ ,
+  - AltGr+,
   - ':'
   - PSCRN
   - {t: ▽, type: trans}
@@ -78,9 +78,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  sim:
+  SYM:
   - '!'
-  - $
+  - '@'
   - '#'
   - $
   - '%'
@@ -90,9 +90,9 @@ layers:
   - (
   - )
   - {t: ▽, type: trans}
-  - '@'
-  - (
-  - )
+  - {t: ▽, type: trans}
+  - $$mdi:volume-high$$
+  - $$mdi:skip-next$$
   - $$mdi:play-pause$$
   - '-'
   - '='
@@ -101,9 +101,9 @@ layers:
   - '|'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '#'
-  - '['
-  - ']'
+  - {t: ▽, type: trans}
+  - $$mdi:volume-low$$
+  - $$mdi:skip-previous$$
   - {t: ▽, type: trans}
   - _
   - +
@@ -115,9 +115,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
-  adjust:
+  - {t: ▽, type: trans}
+  ADJ:
   - '&bootloader'
   - F1
   - F2
@@ -154,5 +154,5 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
