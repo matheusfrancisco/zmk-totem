@@ -12,7 +12,7 @@ layers:
   - O
   - P
   - A
-  - '&to LSHFT S'
+  - {t: S, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: D, h: '$$mdi:apple-keyboard-command$$'}
   - {t: F, h: '$$mdi:apple-keyboard-control$$'}
   - G
@@ -35,8 +35,8 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:backspace$$', h: '$$mdi:apple-keyboard-command$$'}
   - NAVI
-  - RET
   - $$mdi:keyboard-space$$
+  - RET
   - SYM
   - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-option$$'}
   NAVI:
