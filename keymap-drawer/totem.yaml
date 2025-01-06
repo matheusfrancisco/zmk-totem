@@ -35,8 +35,8 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:backspace$$', h: '$$mdi:apple-keyboard-command$$'}
   - NAVI
-  - $$mdi:keyboard-space$$
   - RET
+  - $$mdi:keyboard-space$$
   - SYM
   - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-option$$'}
   NAVI:
@@ -75,7 +75,7 @@ layers:
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: '$$mdi:backspace$$', type: backspace}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   SYM:
