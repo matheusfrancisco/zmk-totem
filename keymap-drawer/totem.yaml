@@ -12,9 +12,9 @@ layers:
   - O
   - P
   - A
-  - S
-  - D
-  - F
+  - '&to LSHFT S'
+  - {t: D, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: F, h: '$$mdi:apple-keyboard-control$$'}
   - G
   - H
   - J
