@@ -81,8 +81,8 @@ layers:
   SYM:
   - '!'
   - '@'
-  - '#'
-  - $
+  - (
+  - )
   - '%'
   - ^
   - '&'
@@ -90,25 +90,25 @@ layers:
   - (
   - )
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - $$mdi:volume-high$$
-  - $$mdi:skip-next$$
-  - $$mdi:play-pause$$
-  - '-'
-  - '='
+  - '&HASH'
   - '{'
   - '}'
+  - '!'
+  - '-'
+  - '='
+  - $$mdi:volume-high$$
+  - trans
   - '|'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - $$mdi:volume-low$$
-  - $$mdi:skip-previous$$
+  - '&DLLR'
+  - '['
+  - ']'
   - {t: ▽, type: trans}
   - _
   - +
-  - '['
-  - ']'
+  - $$mdi:volume-low$$
+  - trans
   - \
   - {t: ▽, type: trans}
   - {t: '$$mdi:backspace-reverse-outline$$', h: '$$mdi:apple-keyboard-command$$'}
