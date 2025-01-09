@@ -90,7 +90,7 @@ layers:
   - (
   - )
   - {t: ▽, type: trans}
-  - '&HASH'
+  - '#'
   - '{'
   - '}'
   - '!'
@@ -101,7 +101,7 @@ layers:
   - '|'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&DLLR'
+  - $
   - '['
   - ']'
   - {t: ▽, type: trans}
