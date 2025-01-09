@@ -80,7 +80,7 @@ layers:
   - {t: ▽, type: trans}
   SYM:
   - '!'
-  - '@'
+  - $
   - (
   - )
   - '%'
@@ -90,25 +90,25 @@ layers:
   - (
   - )
   - {t: ▽, type: trans}
-  - '#'
+  - '@'
   - '{'
   - '}'
   - '!'
   - '-'
   - '='
   - $$mdi:volume-high$$
-  - trans
+  - {t: ▽, type: trans}
   - '|'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - $
+  - '#'
   - '['
   - ']'
   - {t: ▽, type: trans}
   - _
   - +
   - $$mdi:volume-low$$
-  - trans
+  - {t: ▽, type: trans}
   - \
   - {t: ▽, type: trans}
   - {t: '$$mdi:backspace-reverse-outline$$', h: '$$mdi:apple-keyboard-command$$'}
