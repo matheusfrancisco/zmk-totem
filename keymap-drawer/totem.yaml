@@ -79,7 +79,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   SYM:
-  - '!'
+  - _
   - $
   - (
   - )
@@ -89,7 +89,7 @@ layers:
   - '*'
   - (
   - )
-  - {t: ▽, type: trans}
+  - '!'
   - '@'
   - '{'
   - '}'
@@ -100,7 +100,7 @@ layers:
   - {t: ▽, type: trans}
   - '|'
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '-'
   - '#'
   - '['
   - ']'
