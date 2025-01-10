@@ -104,7 +104,7 @@ layers:
   - '#'
   - '['
   - ']'
-  - {t: ▽, type: trans}
+  - '='
   - _
   - +
   - $$mdi:volume-low$$
