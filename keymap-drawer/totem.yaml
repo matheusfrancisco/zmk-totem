@@ -17,7 +17,7 @@ layers:
   - {t: F, h: '$$mdi:apple-keyboard-control$$'}
   - G
   - H
-  - J
+  - {t: J, h: SYM}
   - K
   - L
   - ;
@@ -38,7 +38,7 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   - RET
   - $$mdi:keyboard-space$$
-  - SYM
+  - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-option$$'}
   NAVI:
   - '1'
   - '2'
@@ -75,7 +75,7 @@ layers:
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   SYM:
@@ -95,7 +95,7 @@ layers:
   - )
   - '!'
   - '-'
-  - '='
+  - {t: '=', type: held}
   - $$mdi:volume-high$$
   - {t: ▽, type: trans}
   - '|'
@@ -116,7 +116,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   ADJ:
   - '&bootloader'
   - F1
@@ -134,7 +134,7 @@ layers:
   - F7
   - F8
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - $$mdi:bluetooth-off$$
@@ -155,4 +155,4 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
