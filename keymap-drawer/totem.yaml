@@ -63,8 +63,8 @@ layers:
   - {t: ▽, type: trans}
   - $$mdi:apple-keyboard-shift$$
   - {t: ▽, type: trans}
+  - AltGr+,
   - '!'
-  - ':'
   - PSCRN
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -93,7 +93,7 @@ layers:
   - '@'
   - (
   - )
-  - AltGr+,
+  - ':'
   - '-'
   - {type: held}
   - $$mdi:volume-high$$
