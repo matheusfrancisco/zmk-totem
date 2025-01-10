@@ -56,7 +56,7 @@
       label= "SYM";
       bindings = <
                &kp UNDER &kp DLLR &kp LBRC     &kp RBRC  &kp PRCNT  &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR
-               &kp EXCL   &kp AT  &kp LPAR  &kp RPAR   &kp EXCL   &kp MINUS &kp EQUAL &kp C_VOL_UP  &trans &kp PIPE
+               &kp EXCL   &kp AT  &kp LPAR  &kp RPAR   &kp EXCL   &kp MINUS &trans &kp C_VOL_UP  &trans &kp PIPE
         &trans &kp MINUS   &kp HASH  &kp LBKT &kp RBKT &trans     &kp UNDER &kp PLUS  &kp C_VOL_DN  &trans &kp BSLH &trans
                                      &tp LGUI DEL &trans &trans   &trans &trans &trans
       >;
