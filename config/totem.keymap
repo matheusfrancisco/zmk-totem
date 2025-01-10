@@ -65,10 +65,10 @@
     adjust_layer {
       label= "ADJ";
       bindings = <
-                    &bootloader  &kp F1 &kp F2  &kp F3  &kp F4   &trans       &trans       &trans       &trans       &bt BT_CLR
-                    &out OUT_TOG &kp F5 &kp F6  &kp F7  &kp F8   &trans       &trans       &trans       &trans       &bt BT_CLR_ALL
-        &sys_reset  &kp KP_NLCK  &kp F9 &kp F10 &kp F11 &kp F12  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &bt BT_SEL 5
-                                           &trans &trans &trans  &trans &trans &trans
+                    &bootloader  &kp F1 &kp F2  &kp F3  &kp F4   &kp F5       &kp F6      &kp F7       &kp F8       &bt BT_CLR
+                    &out OUT_TOG &kp ASTRK  &kp MINUS  &kp PLUS  &kp EQUAL   &trans       &trans       &trans       &trans       &bt BT_CLR_ALL
+        &sys_reset  &kp KP_NLCK  &trans &kp DLLR &kp AMPS &kp PIPE  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &bt BT_SEL 5
+                                           &kp F9  &kp F10 &kp F11  &kp F12 &trans &trans
       >;
     };
   };
