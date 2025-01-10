@@ -95,7 +95,7 @@ layers:
   - )
   - '!'
   - '-'
-  - {t: '=', type: held}
+  - {type: held}
   - $$mdi:volume-high$$
   - {t: ▽, type: trans}
   - '|'
