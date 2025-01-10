@@ -47,7 +47,7 @@
       bindings = <
                &kp N1    &kp N2    &kp N3        &kp N4    &kp N5     &kp N6   &kp N7   &kp N8 &kp N9    &kp N0
                &kp TAB   &kp GRAVE &kp TILDE     &kp SQT   &kp DQT    &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans
-        &trans &kp LSHFT &trans    &kp RA(COMMA) &kp COLON &kp PSCRN  &trans   &trans   &trans &trans    &kp QMARK &trans
+        &trans &kp LSHFT &trans    &kp EXCL &kp COLON &kp PSCRN  &trans   &trans   &trans &trans    &kp QMARK &trans
                                                 &trans &trans &trans  &trans &trans &trans
       >;
     };
@@ -56,7 +56,7 @@
       label= "SYM";
       bindings = <
                &kp UNDER &kp DLLR &kp LBRC     &kp RBRC  &kp PRCNT  &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR
-               &kp EXCL   &kp AT  &kp LPAR  &kp RPAR   &kp EXCL   &kp MINUS &trans &kp C_VOL_UP  &trans &kp PIPE
+               &kp EXCL   &kp AT  &kp LPAR  &kp RPAR   &kp RA(COMMA)   &kp MINUS &trans &kp C_VOL_UP  &trans &kp PIPE
         &trans &kp MINUS   &kp HASH  &kp LBKT &kp RBKT &kp EQUAL     &kp UNDER &kp PLUS  &kp C_VOL_DN  &trans &kp BSLH &trans
                                      &tp LGUI DEL &trans &trans   &trans &trans &trans
       >;
