@@ -3,73 +3,127 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
-
 #define BASE 0
 #define NAV  1
-#define SYM  2
-#define ADJ  3
+#define NUM  2
+#define SYM  3
+#define FUN  4
+
+// Key positions (TOTEM, 38 keys)
+//            0  1  2  3  4      5  6  7  8  9
+//           10 11 12 13 14     15 16 17 18 19
+//        20 21 22 23 24 25     26 27 28 29 30 31
+//                 32 33 34     35 36 37
+#define KEYS_L 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25
+#define KEYS_R 5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 31
+#define THUMBS 32 33 34 35 36 37
+
+// Layer-taps: balanced so a held thumb + opposite-hand tap fires the layer
+// immediately; quick-tap lets double-tap-hold auto-repeat BSPC/DEL.
+&lt {
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <175>;
+};
 
 / {
-  conditional_layers {
-    compatible = "zmk,conditional-layers";
-    adjust_layer {
-      if-layers = <1 2>;
-      then-layer = <3>;
+  behaviors {
+    // Home-row mods, bilateral: the hold only triggers when the next key is
+    // on the opposite hand or a thumb, so same-hand rolls always produce taps.
+    hml: home_row_mod_left {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        flavor = "balanced";
+        tapping-term-ms = <260>;
+        quick-tap-ms = <175>;
+        require-prior-idle-ms = <150>;
+        hold-trigger-key-positions = <KEYS_R THUMBS>;
+        hold-trigger-on-release;
+        bindings = <&kp>, <&kp>;
+    };
+    hmr: home_row_mod_right {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        flavor = "balanced";
+        tapping-term-ms = <260>;
+        quick-tap-ms = <175>;
+        require-prior-idle-ms = <150>;
+        hold-trigger-key-positions = <KEYS_L THUMBS>;
+        hold-trigger-on-release;
+        bindings = <&kp>, <&kp>;
     };
   };
 
-  behaviors {
-    tp: homerow_mods {
-        compatible = "zmk,behavior-hold-tap";
-        label = "HOMEROW_MODS";
-        #binding-cells = <2>;
-        tapping-term-ms = <150>;
-        quick-tap-ms = <0>;
-        flavor = "tap-preferred";
-        bindings = <&kp>, <&kp>;
+  combos {
+    compatible = "zmk,combos";
+    combo_esc {
+      timeout-ms = <40>;
+      require-prior-idle-ms = <100>;
+      key-positions = <1 2>;
+      bindings = <&kp ESC>;
+      layers = <BASE>;
     };
   };
 
   keymap {
     compatible = "zmk,keymap";
 
+    // Mods (CAGS, macOS): pinky Ctrl, ring Alt, middle Cmd, index Shift.
     base_layer {
-      label= "BASE";
+      display-name = "BASE";
       bindings = <
-                    &kp Q &kp W &kp E &kp R &kp T  &kp Y  &kp U &kp I     &kp O   &kp P
-                    &kp A &tp LSHFT S &tp LGUI D &tp LCTRL F &kp G  &kp H  &lt SYM J &kp K     &kp L   &kp SEMI
-      &tp LCTRL ESC &kp Z &kp X &kp C &kp V &kp B  &kp N  &kp M &kp COMMA &kp DOT &kp FSLH &kp LSHFT
-                  &tp LGUI BSPC &mo NAV &kp BSPC   &kp RET &kp SPACE &tp LALT ESC
+                   &kp Q        &kp W        &kp E        &kp R         &kp T          &kp Y   &kp U         &kp I        &kp O        &kp P
+                   &hml LCTRL A &hml LALT S  &hml LGUI D  &hml LSHFT F  &kp G          &kp H   &hmr RSHFT J  &hmr RGUI K  &hmr RALT L  &hmr RCTRL SEMI
+      &caps_word   &kp Z        &kp X        &kp C        &kp V         &kp B          &kp N   &kp M         &kp COMMA    &kp DOT      &kp FSLH         &kp SQT
+                                             &lt FUN ESC  &lt NAV BSPC  &kp TAB        &lt SYM RET  &kp SPACE  &lt NUM DEL
       >;
     };
 
+    // Held by left thumb; arrows/text-nav on the right hand, clipboard on the
+    // left bottom row. Left HRMs stay transparent so Shift/Cmd+arrows work.
     nav_layer {
-      label= "NAVI";
+      display-name = "NAV";
       bindings = <
-               &kp N1    &kp N2    &kp N3        &kp N4    &kp N5     &kp N6   &kp N7   &kp N8 &kp N9    &kp N0
-               &kp TAB   &kp GRAVE &kp TILDE     &kp SQT   &kp DQT    &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans
-        &trans &kp LSHFT &trans    &kp RA(COMMA) &kp EXCL &kp PSCRN  &trans   &trans   &trans &trans    &kp QMARK &trans
-                                                &trans &trans &trans  &trans &trans &trans
+                   &trans       &trans       &trans       &trans        &trans         &kp LG(LEFT)  &kp LA(LEFT)  &kp LA(RIGHT)  &kp LG(RIGHT)  &trans
+                   &trans       &trans       &trans       &trans        &trans         &kp LEFT      &kp DOWN      &kp UP         &kp RIGHT      &trans
+      &trans       &kp LG(Z)    &kp LG(X)    &kp LG(C)    &kp LG(V)     &trans         &kp HOME      &kp PG_DN     &kp PG_UP      &kp END        &trans      &trans
+                                             &trans       &trans        &trans         &trans        &trans        &trans
       >;
     };
 
-    sim_layer {
-      label= "SYM";
+    // Held by right thumb; numpad on the left hand (ring/middle/index),
+    // operators on the right top row. Right HRMs stay transparent.
+    num_layer {
+      display-name = "NUM";
       bindings = <
-               &kp UNDER &kp DLLR &kp LBRC     &kp RBRC  &kp PRCNT  &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR
-               &kp EXCL   &kp AT  &kp LPAR  &kp RPAR   &kp COLON   &kp MINUS &trans &kp C_VOL_UP  &trans &kp PIPE
-        &trans &kp MINUS   &kp HASH  &kp LBKT &kp RBKT &kp EQUAL     &kp UNDER &kp PLUS  &kp C_VOL_DN  &trans &kp BSLH &trans
-                                     &tp LGUI DEL &trans &trans   &trans &trans &trans
+                   &trans       &kp N7       &kp N8       &kp N9        &trans         &trans   &kp FSLH   &kp ASTRK   &kp MINUS   &kp PLUS
+                   &kp N0       &kp N4       &kp N5       &kp N6        &trans         &trans   &trans     &trans      &trans      &trans
+      &trans       &trans       &kp N1       &kp N2       &kp N3        &trans         &trans   &trans     &kp COMMA   &kp DOT     &kp EQUAL   &trans
+                                             &trans       &trans        &trans         &trans   &trans     &trans
       >;
     };
 
-    adjust_layer {
-      label= "ADJ";
+    // Held by right thumb; bracket pairs stacked on left middle+index,
+    // operators on the right home row.
+    sym_layer {
+      display-name = "SYM";
       bindings = <
-                    &bootloader  &kp F1 &kp F2  &kp F3  &kp F4   &kp F5       &kp F6      &kp F7       &kp F8       &bt BT_CLR
-                    &out OUT_TOG &kp ASTRK  &kp MINUS  &kp PLUS  &kp EQUAL   &trans       &trans       &trans       &trans       &bt BT_CLR_ALL
-        &sys_reset  &kp KP_NLCK  &trans &kp DLLR &kp AMPS &kp PIPE  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &bt BT_SEL 5
-                                           &kp F9  &trans &kp F10  &kp F11 &kp F12 &trans
+                   &kp GRAVE    &kp TILDE    &kp LBRC     &kp RBRC      &kp PRCNT      &kp CARET  &kp AMPS   &kp ASTRK  &kp LT     &kp GT
+                   &kp EXCL     &kp AT       &kp LPAR     &kp RPAR      &kp COLON      &kp MINUS  &kp EQUAL  &kp PLUS   &kp PIPE   &kp DQT
+      &trans       &kp HASH     &kp DLLR     &kp LBKT     &kp RBKT      &kp UNDER      &kp BSLH   &kp FSLH   &kp QMARK  &kp SEMI   &kp SQT     &trans
+                                             &trans       &trans        &trans         &trans     &trans     &trans
+      >;
+    };
+
+    // Held by left thumb; F-keys numpad-style on the right, BT/system on the
+    // left, media on the right pinky column.
+    fun_layer {
+      display-name = "FUN";
+      bindings = <
+                   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3  &bt BT_SEL 4   &kp F10    &kp F7     &kp F8     &kp F9     &kp C_PP
+                   &bt BT_CLR   &out OUT_TOG &trans       &trans        &trans         &kp F11    &kp F4     &kp F5     &kp F6     &kp C_MUTE
+      &bootloader  &sys_reset   &trans       &trans       &trans        &trans         &kp F12    &kp F1     &kp F2     &kp F3     &kp C_VOL_DN  &kp C_VOL_UP
+                                             &trans       &trans        &trans         &trans     &trans     &trans
       >;
     };
   };

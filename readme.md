@@ -4,8 +4,9 @@ Based on my QMK Corne Firmware
 https://github.com/rafaeldelboni/alphadel-crkbd-keymap
 
 ## Features
-- conditional_layers for `adjust_layer`
-- tap-dance for `&tp`, enabling commands like CESC (Ctrl on hold or ESC on tap)
-- dynamic mod with for `cedil` (cedilla) on linux `RALT + COMMA`
+- Bilateral home-row mods (`hml`/`hmr`, CAGS: Ctrl Alt Cmd Shift from pinky to index), `balanced` flavor, `require-prior-idle-ms`, opposite-hand `hold-trigger-key-positions`
+- Layer-taps on the thumbs: `ESC/FUN`, `BSPC/NAV`, `TAB` | `RET/SYM`, `SPACE`, `DEL/NUM`
+- NAV: arrows + word/line jumps on the right hand, clipboard on the left; NUM: numpad on the left hand; SYM: bracket pairs stacked on middle+index
+- `&caps_word` on the bottom-left pinky, `W+E` combo for `ESC`
 
 ![keymap](keymap-drawer/totem.svg)
