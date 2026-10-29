@@ -21,7 +21,7 @@ layers:
   - {t: K, h: '$$mdi:apple-keyboard-command$$'}
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
   - {t: ;, h: '$$mdi:apple-keyboard-control$$'}
-  - '&caps_word'
+  - $$mdi:keyboard-esc$$
   - Z
   - X
   - C
@@ -195,7 +195,3 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-combos:
-- p: [1, 2]
-  k: $$mdi:keyboard-esc$$
-  l: [BASE]
