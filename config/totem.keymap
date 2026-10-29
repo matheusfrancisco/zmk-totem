@@ -54,17 +54,6 @@
     };
   };
 
-  combos {
-    compatible = "zmk,combos";
-    combo_esc {
-      timeout-ms = <40>;
-      require-prior-idle-ms = <100>;
-      key-positions = <1 2>;
-      bindings = <&kp ESC>;
-      layers = <BASE>;
-    };
-  };
-
   keymap {
     compatible = "zmk,keymap";
 
@@ -74,7 +63,7 @@
       bindings = <
                    &kp Q        &kp W        &kp E        &kp R         &kp T          &kp Y   &kp U         &kp I        &kp O        &kp P
                    &hml LCTRL A &hml LALT S  &hml LGUI D  &hml LSHFT F  &kp G          &kp H   &hmr RSHFT J  &hmr RGUI K  &hmr RALT L  &hmr RCTRL SEMI
-      &caps_word   &kp Z        &kp X        &kp C        &kp V         &kp B          &kp N   &kp M         &kp COMMA    &kp DOT      &kp FSLH         &kp SQT
+      &kp ESC      &kp Z        &kp X        &kp C        &kp V         &kp B          &kp N   &kp M         &kp COMMA    &kp DOT      &kp FSLH         &kp SQT
                                              &lt FUN ESC  &lt NAV BSPC  &kp TAB        &lt SYM RET  &kp SPACE  &lt NUM DEL
       >;
     };
