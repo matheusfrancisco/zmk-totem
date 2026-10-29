@@ -11,17 +11,17 @@ layers:
   - I
   - O
   - P
-  - A
-  - {t: S, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: A, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: S, h: '$$mdi:apple-keyboard-option$$'}
   - {t: D, h: '$$mdi:apple-keyboard-command$$'}
-  - {t: F, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
   - G
   - H
-  - {t: J, h: SYM}
-  - K
-  - L
-  - ;
-  - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: K, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: L, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: ;, h: '$$mdi:apple-keyboard-control$$'}
+  - '&caps_word'
   - Z
   - X
   - C
@@ -32,45 +32,45 @@ layers:
   - ','
   - .
   - /
-  - $$mdi:apple-keyboard-shift$$
-  - {t: '$$mdi:backspace$$', h: '$$mdi:apple-keyboard-command$$'}
-  - NAVI
-  - {t: '$$mdi:backspace$$', type: backspace}
-  - RET
-  - $$mdi:keyboard-space$$
-  - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-option$$'}
-  NAVI:
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - '6'
-  - '7'
-  - '8'
-  - '9'
-  - '0'
-  - $$mdi:keyboard-tab$$
-  - '`'
-  - '~'
   - ''''
-  - '"'
+  - {t: '$$mdi:keyboard-esc$$', h: FUN}
+  - {t: '$$mdi:backspace$$', h: NAV}
+  - $$mdi:keyboard-tab$$
+  - {t: RET, h: SYM}
+  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:backspace-reverse-outline$$', h: NUM}
+  NAV:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Gui+$$mdi:arrow-left-bold$$
+  - Alt+$$mdi:arrow-left-bold$$
+  - Alt+$$mdi:arrow-right-bold$$
+  - Gui+$$mdi:arrow-right-bold$$
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-up-bold$$
   - $$mdi:arrow-right-bold$$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - $$mdi:apple-keyboard-shift$$
+  - Gui+Z
+  - Gui+X
+  - Gui+C
+  - Gui+V
   - {t: ▽, type: trans}
-  - AltGr+,
-  - '!'
-  - PSCRN
+  - HOME
+  - PG DN
+  - PG UP
+  - END
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '?'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
@@ -78,81 +78,124 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  NUM:
+  - {t: ▽, type: trans}
+  - '7'
+  - '8'
+  - '9'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - /
+  - '*'
+  - '-'
+  - +
+  - '0'
+  - '4'
+  - '5'
+  - '6'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '1'
+  - '2'
+  - '3'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ','
+  - .
+  - '='
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
   SYM:
-  - _
-  - $
+  - '`'
+  - '~'
   - '{'
   - '}'
   - '%'
   - ^
   - '&'
   - '*'
-  - (
-  - )
+  - <
+  - '>'
   - '!'
   - '@'
   - (
   - )
   - ':'
   - '-'
-  - {type: held}
-  - $$mdi:volume-high$$
-  - {t: ▽, type: trans}
+  - '='
+  - +
   - '|'
+  - '"'
   - {t: ▽, type: trans}
-  - '-'
   - '#'
+  - $
   - '['
   - ']'
-  - '='
   - _
-  - +
-  - $$mdi:volume-low$$
-  - {t: ▽, type: trans}
   - \
+  - /
+  - '?'
+  - ;
+  - ''''
   - {t: ▽, type: trans}
-  - {t: '$$mdi:backspace-reverse-outline$$', h: '$$mdi:apple-keyboard-command$$'}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  ADJ:
-  - '&bootloader'
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
-  - F6
-  - F7
-  - F8
-  - BT CLR
-  - OUT TOG
-  - '*'
-  - '-'
-  - +
-  - '='
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - $$mdi:bluetooth-off$$
-  - '&sys_reset'
-  - KP NLCK
-  - {t: ▽, type: trans}
-  - $
-  - '&'
-  - '|'
+  FUN:
   - {t: '$$mdi:bluetooth-connect$$', h: '0'}
   - {t: '$$mdi:bluetooth-connect$$', h: '1'}
   - {t: '$$mdi:bluetooth-connect$$', h: '2'}
   - {t: '$$mdi:bluetooth-connect$$', h: '3'}
   - {t: '$$mdi:bluetooth-connect$$', h: '4'}
-  - {t: '$$mdi:bluetooth-connect$$', h: '5'}
-  - F9
-  - {type: held}
   - F10
-  - F11
-  - F12
+  - F7
+  - F8
+  - F9
+  - $$mdi:play-pause$$
+  - BT CLR
+  - OUT TOG
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - F11
+  - F4
+  - F5
+  - F6
+  - $$mdi:volume-off$$
+  - '&bootloader'
+  - '&sys_reset'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - F12
+  - F1
+  - F2
+  - F3
+  - $$mdi:volume-low$$
+  - $$mdi:volume-high$$
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+combos:
+- p: [1, 2]
+  k: $$mdi:keyboard-esc$$
+  l: [BASE]
